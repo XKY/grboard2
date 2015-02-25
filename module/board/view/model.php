@@ -49,7 +49,7 @@ class Model {
 		foreach($result as &$column) {
 			$column = stripslashes($column);
 		}
-		return $result;
+		return str_replace( "\\", "", $result);
 	}
 
 	public function getBoardCategory($id) {
